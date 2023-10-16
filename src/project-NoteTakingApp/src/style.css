@@ -1,0 +1,135 @@
+/* variables */
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #292929;
+    --secondary-color-light: #3c3c3c;
+    --tertiary-color: #f2f2f2;
+    --accent-color: #295ff3;
+    --accent-color-green: #29f3b5;
+    --accent-color-red: #f32929;
+    --font-color: #f2f2f2;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+.container {
+    width: 500px;
+    height: 600px;
+
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: 10% 30% 10% 50%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background-color: var(--secondary-color);
+}
+.nav {
+    background-color: var(--secondary-color-light);
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.nav__btn {
+    all: unset;
+    height: 100%;
+    /* width dsame as height */
+    width: 60px;
+    color: var(--font-color);
+    text-align: center;
+
+    font-size: 1.5rem;
+}
+.nav__btn:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+.nav__btn > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+}
+
+.term {
+    width: 100%;
+    height: 100%;
+}
+.term > h3 {
+    font-size: 2.5rem;
+    color: var(--font-color);
+    text-align: center;
+    margin-top: 20px;
+}
+.term > input {
+    all: unset;
+    width: 50%;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--font-color);
+    text-align: center;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.reveal {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reveal__btn {
+    all: unset;
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    color: var(--font-color);
+    text-align: center;
+}
+.reveal__btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    transition: 0.3s;
+}
+.reveal__btn:active {
+    box-shadow: 0 0 0 1px var(--primary-color);
+    transition: 0.1s;
+}
+
+.stats {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    color: var(--font-color);
+
+    position: relative;
+}
+.stats > * {
+    margin-left: 20px;
+}

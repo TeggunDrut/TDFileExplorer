@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            html,
+            body {
+                font-family: sans-serif;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TDFileExplorer</h1>
+        <a href="./matrix.js" target="_blank">matrix.js</a> <br />
+        <a href="./NeuralNetwork.js" target="_blank">NeuralNetwork.js</a>
+        <code>
+            <br /><br />
+            let nn = new NeuralNetwork([2, 4, 4, 1]); <br />
+            <br />
+            let trainingData = [<br />
+            &nbsp; {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; inputs: [0, 0],<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; targets: [0],<br />
+            &nbsp; },<br />
+            &nbsp; {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; inputs: [0, 1],<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; targets: [1],<br />
+            &nbsp; },<br />
+            &nbsp; {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; inputs: [1, 0],<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; targets: [1],<br />
+            &nbsp; },<br />
+            &nbsp; {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; inputs: [1, 1],<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; targets: [0],<br />
+            &nbsp; },<br />
+            ];<br /><br />
+            let targets = [1];<br />
+            for (let i = 0; i < 10000; i++) {<br />
+            &nbsp; let data = trainingData[Math.floor(Math.random() * 4)];<br />
+            &nbsp; nn.train(data.inputs, data.targets);<br />
+            }<br /><br />
+            console.log(nn.feedforward([0, 0])); // .000123294<br />
+            console.log(nn.feedforward([0, 1])); // .924786192<br />
+            console.log(nn.feedforward([1, 0])); // .923873412<br />
+            console.log(nn.feedforward([1, 1])); // .023899393<br />
+        </code>
+        <div>
+            <script src="matrix.js"></script>
+            <script src="NeuralNetwork.js"></script>
+            <script>
+                let nn = new NeuralNetwork(
+                    [2, 8, 8, 1],
+                    [
+                        {
+                            activation: sigmoid,
+                            derivative: sigmoid_derivative,
+                        },
+                        {
+                            activation: sigmoid,
+                            derivative: sigmoid_derivative,
+                        },
+                        {
+                            activation: sigmoid,
+                            derivative: sigmoid_derivative,
+                        },
+                        {
+                            activation: sigmoid,
+                            derivative: sigmoid_derivative,
+                        },
+                    ]
+                );
+
+                let trainingData = [
+                    {
+                        inputs: [0, 0],
+                        targets: [0],
+                    },
+                    {
+                        inputs: [0, 1],
+                        targets: [1],
+                    },
+                    {
+                        inputs: [1, 0],
+                        targets: [1],
+                    },
+                    {
+                        inputs: [1, 1],
+                        targets: [0],
+                    },
+                ];
+
+                let targets = [1];
+                for (let i = 0; i < 10000; i++) {
+                    let data = trainingData[Math.floor(Math.random() * 4)];
+                    nn.train(data.inputs, data.targets);
+                }
+
+                console.log(nn.feedforward([0, 0])); // .000123294
+                console.log(nn.feedforward([0, 1])); // .924786192
+                console.log(nn.feedforward([1, 0])); // .923873412
+                console.log(nn.feedforward([1, 1])); // .023899393
+            </script>
+        </div>
+    </body>
+</html>

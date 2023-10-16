@@ -1,0 +1,12 @@
+This is how React will look like in the project, for the most part
+If you don't like it we can roll back these changes...
+
+
+I'd probably simplify HTML more and just leave one root element, and add all the other stuff to React too
+
+
+We could delete the pages/game folder
+I kinda added all that into public
+
+We could also make pages/menu naviagtable in react and then remove this as well?
+

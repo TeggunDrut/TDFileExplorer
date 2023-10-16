@@ -1,0 +1,127 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  overflow: hidden;
+}
+.app {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  resize: both;
+  overflow: auto;
+
+  min-width: 200px;
+  min-height: 30px;
+}
+.app-selected {
+  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); */
+}
+
+.titleBar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 30px;
+  background: rgb(40, 40, 40);
+  color: #fff;
+  z-index: 2;
+  user-select: none;
+  line-height: 30px;
+}
+
+.titleBar:hover {
+  cursor: move;
+}
+
+.titleBar > p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-left: 5px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 3;
+  user-select: none;
+  line-height: 30px;
+}
+
+.appButtons {
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  width: 60px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 2;
+}
+
+.appBtn {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 3;
+  user-select: none;
+  text-align: center;
+  line-height: 30px;
+}
+
+.appBody {
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  width: 100%;
+  height: calc(100% - 30px);
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: white;
+  color: #fff;
+  z-index: 2;
+  user-select: none;
+  line-height: 30px;
+  overflow: hidden;
+}
+.log {
+  margin: 0 auto;
+}
+
+.desktop {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/desktop1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+
+  display: grid;
+  z-index: -1;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.appBody > iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

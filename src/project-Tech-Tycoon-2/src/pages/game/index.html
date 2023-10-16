@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Tycoon 2</title>
+    <link rel="stylesheet" href="../game/style/styles.css">
+    <script src="../game/scripts/utils.js"></script>
+    <script src="../game/scripts/script.js"></script>
+</head>
+<body>
+    <!-- Top left buttons -->
+    <div id="shopCont">
+        <button id="shopBtn" class="mediumButton" onclick="openShop()">Shop</button>
+    </div>
+    <div id="upgradesCont">
+        <button id="upgradesBtn" class="mediumButton" onclick="openUpgrade()">Upgrades</button>
+    </div>
+    
+    <!-- Top right buttons -->
+    <div id="cashMoneyCont" class="mediumButton">Money: 200</div>
+    <div id="expCount" class="mediumButton">EXP: 0</div> <!--Changes exp in JS (.innerHTML)-->
+    <!-- <div id="buyPremiumCont"></div> Middle bottom -->
+
+
+
+    <div id="shopGui" class="modalContainer hidden">
+        
+    </div>
+
+    <div id="upgradeGui" class="modalContainer hidden">
+        <div class="modalGui">
+            <div class="modalHeader">
+                <h2 class="centerText">Upgrade</h2>
+                <button id="closeButton" onclick="closeMenu('upgradeGui')">X</button>
+            </div>
+
+            <div id="upgradeBox" height="100px"></div>
+        </div>
+    </div>
+
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="../../compiled/ShopModal/shopItems.js"></script>
+    <script src="../../compiled/ShopModal/ShopModal.js"></script>
+
+</body>
+<!-- MUSIC -->
+<embed src="" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+
+</html>

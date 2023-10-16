@@ -1,0 +1,49 @@
+html {
+    height: 100%;
+}
+
+@font-face {
+    font-family: font;
+    src: url(../../../font/game.TTF);
+}
+
+* {
+    font-family: font;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.mainMenuContainer {
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    text-align: center;
+
+    margin-top: 100px;
+    padding: 20px 0px;
+
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.mainMenuContainer button {
+    cursor: pointer;
+    
+    font-size: 16px;
+    padding: 10px;
+    margin: 20px;
+
+    width: 180px;
+
+
+    background: #008cba;
+    border-color: #007095;
+    border-radius: 4px;
+    border-width: 1px;
+    color: white;
+    cursor: pointer;    
+}

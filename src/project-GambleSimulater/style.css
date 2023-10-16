@@ -1,0 +1,10 @@
+.roll {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}

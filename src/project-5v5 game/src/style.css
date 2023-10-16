@@ -1,0 +1,49 @@
+html, body {
+  /* background-color: 0xff0090ff; */
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.container {}
+
+.active {
+  animation: slideUp 1s infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  50% {
+    position: absolute;
+    top: 0;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.options {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  padding-top: 20px;
+  text-shadow: -1px 1px 0 black, 1px 1px 0 black, 1px -1px 0 black;
+  color: white;
+}

@@ -1,0 +1,217 @@
+html {
+    height: 100%;
+    background-image: url(../../../../art/sprites/ROAD.png);
+    background-size: cover;
+}
+
+body {
+    height: 100%;
+}
+
+@font-face {
+    font-family: font;
+    src: url(../../../../font/game.TTF);
+}
+
+* {
+    font-family: font;
+    -webkit-user-select: none
+}
+
+.centerText {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.mediumButton {
+    width: 1.7in;
+
+    background: #1abc9c;
+    border-bottom: #16a085 3px solid;
+    border-left: #16a085 2px solid;
+    border-right: #16a085 2px solid;
+    border-radius: 6px;
+
+    text-align: center;
+    color: white;
+    float: left;
+    font-size: 34px;
+    font-weight: 800;
+    padding: 10px;
+    padding-top: 12px;
+
+    outline: none;
+    user-select: none;
+}
+
+button.mediumButton {
+    cursor: pointer;
+}
+
+button.mediumButton:hover {
+    opacity: 0.8; 
+}
+
+button.mediumButton:active {
+    background: #18B495;
+}
+
+#upgradesBtn {
+    position: absolute;
+    top: .81in;
+    left: 7px;
+}
+
+#cashMoneyCont {
+    width: auto;
+
+    position: absolute;
+    right: 10px;
+}
+
+#expCount {
+    width: auto;
+
+    position: absolute;
+    right: 10px;
+    top: .81in;
+}
+
+.modalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modalGui {
+    height: 30vw;
+    width: 6in;
+
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color:rgba(125, 125, 228, 0.5);
+    z-index: 9;
+}
+
+.modalHeader {
+    display: flex;
+    margin: 10px;
+}
+
+.modalHeader h2 {
+    flex: 1;
+    margin: 0px;    
+}
+
+#closeButton{
+    width: .7cm;
+    height: .7cm;
+
+    background-color: rgb(214, 214, 233);
+    border-radius: 7px;
+    border: 1px solid black;
+    color: red;
+    cursor: pointer;
+    font-size: 25px;    
+}
+
+#tabsCont {
+    display: flex;
+    text-align: center;
+    margin: 0px 6px;    
+}
+
+.shopCategory {
+    background-color: #1abc9c;
+    border: none;
+    border-bottom: 3px solid #16a085;
+    color: white;
+    cursor: pointer;
+    height: 50px; 
+    flex: 1;
+    font-size: 16pt;
+    outline: none;
+}
+
+.shopCategory:active {
+    position:relative;
+    top: 4px;
+    font-weight: bold;
+}
+
+.shopCategory.selected {
+    border-bottom: 3px solid black;
+}
+
+#itemsBox {
+    height: 20vw;
+    border: 1px solid black;
+    margin: 6px;
+    background-color: whitesmoke;
+    overflow-y: scroll;
+}
+
+
+#upgradeBox {
+    height: 2in;
+    width: 5.7s;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(156, 156, 156); 
+    border-radius: 90px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(128, 128, 128); 
+  }
+
+.itemContainer {
+    width: auto;
+    border: 1px solid black;
+    margin: 4px;
+}
+
+.itemHighlights {
+    display: flex;
+    align-items: center;
+}
+
+.itemImage {
+    margin: 10px;
+}
+
+.item {
+    flex: 2;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.itemName {
+    flex: 5;
+}

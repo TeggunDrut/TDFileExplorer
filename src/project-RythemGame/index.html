@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rythem Game</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background: #000;
+                overflow: hidden;
+            }
+            #audio_box {
+                position: absolute;
+                color: white;
+            }
+            #audio_box > input {
+                position: absolute;
+
+                width: 200px;
+                height: 50px;
+                font-size: 30px;
+                text-align: center;
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
+                z-index: 4;
+            }
+
+            #backgroundCanvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            #canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="audio_box">
+                <input type="text" value="0.00" id="audioInput" />
+            </div>
+            <canvas id="backgroundCanvas"></canvas>
+            <canvas id="canvas"></canvas>
+        </div>
+        <script src="global.js"></script>
+
+        <script src="AudioReceiver.js"></script>
+
+        <script src="Score.js"></script>
+        <script src="Timer.js"></script>
+        <script src="Key.js"></script>
+        <script src="Container.js"></script>
+
+        <!-- <script src="main.js"></script> -->
+
+        <script src="events.js"></script>
+    </body>
+</html>
